@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-page: #0a0a0a;
+  --bg-surface: #141414;
+  --accent-gold: #ffd700;
+  --text-main: #ffffff;
+  --text-sub: #c5c5c5;
+  --border-gold: rgba(255, 215, 0, 0.25);
+  --shadow-glow: 0 10px 30px -10px rgba(255, 215, 0, 0.15);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(180deg, #141414 0%, var(--bg-page) 100%);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+header h1 {
+  background-color: var(--bg-surface);
+  text-align: center;
+  padding: 20px 35px;
+  margin: 0 auto 25px auto;
+  border-radius: 20px;
+  border: 1px solid var(--accent-gold);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  max-width: 750px;
+  box-shadow: var(--shadow-glow);
+  box-sizing: border-box;
+}
+
+header p {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 35px auto;
+  color: var(--text-sub);
+  font-size: 1.05rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 30px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-gold);
+  background-color: rgba(255, 215, 0, 0.08);
+}
+
+header figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 0 auto;
+  max-width: 800px;
+}
+
+header figure img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  display: block;
+}
+
+header figcaption {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+  margin-top: 15px;
+  max-width: 650px;
+}
+
+main {
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+main section:last-of-type {
+  border-bottom: none;
+}
+
+main h2 {
+  text-align: center;
+  color: var(--accent-gold);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 35px 0;
+  letter-spacing: 0.5px;
+}
+
+main section p {
+  color: var(--text-sub);
+  font-size: 1.05rem;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.flor_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  background-color: var(--bg-surface);
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 20px;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+}
+
+.flor_item figure {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flor_item img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.flor_info {
+  text-align: center;
+  width: 100%;
+}
+
+.flor_info h3 {
+  color: var(--accent-gold);
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.flor_info p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-sub);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.flor_info strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.card {
+  position: relative;
+  width: 290px;
+  height: 280px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.lado_a, .lado_b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.lado_a {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--accent-gold);
+  box-shadow: var(--shadow-glow);
+}
+
+.lado_a h2 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.lado_a .click {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.lado_b {
+  background-color: var(--accent-gold);
+  color: #0d0d0d;
+  transform: rotateY(180deg);
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.25);
+}
+
+.lado_b p {
+  margin: 0;
+  color: #0d0d0d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card.flipped .lado_a {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .lado_b {
+  transform: rotateY(360deg);
+}
+
+footer {
+  background-color: var(--bg-surface);
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-gold);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.5rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 15px;
+  }
+  .flor_item {
+    padding: 25px 20px;
+  }
+  .flor_item figure {
+    width: 160px;
+    height: 160px;
+  }
+  .flor_info {
+    text-align: center;
+  }
+  .flor_info p {
+    text-align: center;
+  }
+}
